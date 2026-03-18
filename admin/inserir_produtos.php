@@ -11,36 +11,36 @@
 <div id="formeditarproduto">
         <form id="formularioeditarproduto" action="comandos_admin/inserir_produtos.php" method="post" enctype="multipart/form-data">
 
-        <label for="">Nome do Produto</label>
+        <label for="">Nome do Produto</label> <br>
         <input type="text" name="nomeproduto" id="nomeproduto" required value=""> <br>
 
-        <label for="">Preço</label>
-        <input type="number" name="precoproduto" id="precoproduto" step="0.01" min="0" required value=""> <br>
+        <label for="">Preço</label> <br>
+        <input type="number" name="precoproduto" id="precoproduto" step="0.01" min="0" required value=""> <br> <br>
 
 
-        <label for="">Destque</label>
-        <select name="destaqueproduto" id="">
+        <label for="">Destaque</label><br>
+        <select name="destaqueproduto" id="" class="selectproduto">
             <option value="sim">Sim</option>
             <option value="nao">Não</option>
-        </select> <br>
+        </select> <br> <br>
 
-        <label for="">Categoria</label>
-        <select name="nomecategoria" id="">
+        <label for="">Categoria</label><br>
+        <select name="nomecategoria" id="" class="selectproduto">
             <option value="1">Assados</option>
             <option value="2">Bebidas</option>
-        </select> <br>
+        </select> <br><br>
 
         
         <input type="file" accept="image/*" src="" name="imagem" id="arquivo" alt="" required> <br>
-        <input type="hidden" name="imagem_atual" value="">
+        <input type="hidden" name="imagem_atual" value=""> <br>
 
         <img src="" alt="" id="preview" width="200px"> <br> <br> <br>
 
         
-        <button id="removeimg" type="button">Remover Imagem</button>
-        <button type="button" id="limparform">Limpar Formulário</button>
-        <button type="submit">Inserir Produto</button>
-        <button type="button" onclick="window.location.href='administrativo.php'">Menu Principal</button>
+        <button id="removeimg" class="buttonform" type="button">Remover Imagem</button>
+        <button type="button" id="limparform" class="buttonform">Limpar Formulário</button>
+        <button type="submit" id="enviarform" class="buttonform">Inserir Produto</button>
+        <button type="button" onclick="window.location.href='administrativo.php'" id="menuprincpalbutton" class="buttonform">Menu Principal</button>
     </form>
 </div>
 

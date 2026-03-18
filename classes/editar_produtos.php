@@ -1,5 +1,5 @@
 <?php
-include_once 'c:\xampp\htdocs\casadeassados\config\connn.php';
+include_once __DIR__ . '/../config/connn.php';
 
 class EditarProdutos{
     

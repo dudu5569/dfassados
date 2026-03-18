@@ -143,6 +143,9 @@ h1{
     justify-content: center;
 }
 
+
+/* responsividade para mobile                  */
+
 @media (max-width: 768px) {
     .formopcoesbebidas {
         display: flex !important;
@@ -185,6 +188,35 @@ h1{
     #imagemopcaoproduto{
         width: 100% !important;
         border-radius: 5px;
+    }
+
+    #precoproduto{
+        width: 50% !important;
+        margin: auto;
+    }
+
+    .buttonform{
+        margin-top: 25px;
+        padding: 20px;
+    }
+
+    #arquivo{
+        width: 90% !important;
+    }
+
+    #formularioeditarproduto{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+    .selectproduto{
+        width: 50% !important;
+        margin: auto;
+    }
+
+    #preview{
+        margin: auto;
     }
 }
 
@@ -266,8 +298,13 @@ h1{
     border: 1px solid black;
     height: fit-content;
     width: fit-content;
-    padding: 20px;
+    padding: 10px;
     margin: auto;
+    text-align: center;
+    border-radius: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
 #bodyformedit{
@@ -276,3 +313,55 @@ h1{
     justify-content: center;
     align-items: center;
 }
+
+
+#nomeproduto{
+    width: 100%;
+    border-radius: 5px;
+    border-style: solid;
+}
+
+#precoproduto{
+    border-radius: 5px;
+    border-style: solid;
+}
+
+.selectproduto{
+    border-radius: 5px;
+    padding: 5px;
+}
+
+#removeimg{
+    border-radius: 5px;
+    color: white;
+    background-color: red;
+    border: none;
+    padding: 15px;
+}
+
+
+#enviarform{
+    border-radius: 5px;
+    border: none;
+    background-color: green;
+    color: white;
+    padding: 15px;
+}
+
+
+#limparform{
+    border-radius: 5px;
+    border: none;
+    background-color: orange;
+    color: white;
+    padding: 15px;
+}
+
+#menuprincpalbutton{
+    color: white;
+    background-color: blue;
+    border-radius: 5px;
+    border: none;
+    padding: 15px;
+}
+
