@@ -4,12 +4,16 @@ $inserir = new InserirProdutos();
 
 $form = ['nomeproduto','precoproduto','destaqueproduto','nomecategoria'];
 
-if(empty($_POST[$form] || empty($_FILES['imagem']['name']))){
-    echo "<script>
-    alert('Preencha todos os campos!');
-    window.location.href='../administrativo.php';
-    </script>";
-    exit;
+
+foreach($form as $campo){
+    if(empty($_POST[$campo])){
+        die ("O $campo está vazio!");
+        exit;
+    }
+}
+
+if(empty($_FILES['imagem']['name'])){
+    die ("Imagem não enviada");
 }
 
 
@@ -24,11 +28,16 @@ if(empty($_POST[$form] || empty($_FILES['imagem']['name']))){
         if($inserir_produtos){
             move_uploaded_file($caminho,"../../img/" . $nomeimagem);
             echo "<script>alert('Produto inserido com sucesso!');
-            window.location.href='../administrativo.php';</script>";
+            
+            let idcat = $nomecategoria;
+            if (idcat == 1){
+            window.location.href = '../assados_admin.php';
+            }else if (idcat == 2){
+            window.location.href = '../bebidas_admin.php';
+        }</script>";
         }else{  
             echo "<script>alert('Falha ao inserir produto!');
             window.location.href='../administrativo.php';</script>";
-        }
 }
 
 

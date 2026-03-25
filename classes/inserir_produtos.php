@@ -13,10 +13,11 @@ class InserirProdutos{
             
         $stmt->bind_param("sdsis", $descricao,$preco,$destaque,$id_categoria,$imagem);
         if($stmt->execute()){
-
+            return true;
         }else{
             $erro = $sql->error;
             echo "Erro: " .$error;
+            return false;   
         }
     }
 }
