@@ -365,3 +365,143 @@ h1{
     padding: 15px;
 }
 
+
+/* CSS do carrinho de compras */
+
+.cart-container{
+    width: 100%;
+    max-width: 90vw;
+    margin: auto;
+    text-align: center;
+    padding-top: 10px;
+    transition: transform .5s;
+}
+
+svg{
+    width: 30px;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+header .icon-cart{
+    position: relative;
+}
+
+header .icon-cart span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    right: -20px;
+}
+
+
+.janelacarrinho{
+    width: 400px;
+    background-color: #353432;
+    position: fixed;
+    inset: 0 -400px 0 auto;
+    display: grid;
+    grid-template-rows: 70px 1fr 70px;
+    transition: .5s;
+    height: 100vh;
+}
+
+.janelacarrinho h1{
+    color: white;
+    padding: 20px;
+    margin: 0;
+    font-weight: 300;
+}
+
+.janelacarrinho .botoescarrinho{
+    display: grid;
+    grid-template-columns:  repeat(2,1fr);
+}
+
+
+.janelacarrinho .botoescarrinho button{ 
+    background-color: orange;
+    border: none;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.janelacarrinho .botoescarrinho .checkout{
+    background-color: green;
+    color: white;
+    height: 50px;
+}
+
+.janelacarrinho .botoescarrinho .close{
+    background-color: red;
+    color: white;
+    height: 50px;
+}
+
+
+
+.janelacarrinho .listacompras .itens img{
+    width: 100%;
+}
+
+.janelacarrinho .listacompras .itens{
+    display: grid;
+    grid-template-columns: 70px 150px 50px 1fr;
+    gap: 10px;
+    text-align: center;
+    align-items: center;
+}
+
+.listacompras .itemcarrinhoquantidade span{
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.listacompras .itemcarrinhoquantidade span:nth-child(2){
+    background-color: transparent;
+    color: white;
+
+}
+
+.listacompras .itens:nth-child(even){
+    background-color: #eee1;
+}
+
+
+
+.listacompras::-webkit-scrollbar{
+    width: 0;   
+}
+
+.listacompras{
+    overflow-y: auto;
+    padding: 10px;
+    color: white;
+}
+
+
+/* body com classe para mostrar o carrinho de compras*/
+
+body.mostrarcarrinho .janelacarrinho{
+    inset: 0 0 0 auto;
+}
+
+body.mostrarcarrinho .cart-container{
+    transform: translateX(-250px);
+}

@@ -1,18 +1,21 @@
+//script para os formularios
+
 document.getElementById("arquivo").onchange = function(evt){
     const [file] = this.files;
     if(file){
         document.getElementById("preview").src = URL.createObjectURL(file);
     }
+
 }
 
 document.getElementById("removeimg").addEventListener("click", function(e){
-    e.preventDefault(); //previnir envio do formulario
+    e.preventDefault(); 
     document.getElementById("preview").src = "";
     document.getElementById("arquivo").value = "";
 });
 
 document.getElementById("limparform").addEventListener("click", function(e){
-    e.preventDefault(); //previnir envio do formulario
+    e.preventDefault();
     document.getElementById("preview").src = "";
     document.getElementById("arquivo").value = "";
     document.getElementById("nomeproduto").value = "";
@@ -35,6 +38,4 @@ document.getElementById("trocarimg").addEventListener("change", function(){
     }
 
 });
-
-
 

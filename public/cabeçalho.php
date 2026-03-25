@@ -20,9 +20,9 @@
             <a class="nav-link active" aria-current="page" href="assados.php">Frango Asssado</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="bebidas.php">Bebidas</a>
+            <a class="nav-link active" href="bebidas.php">Bebidas</a>
           </li>
-        </ul>
+        </ul>     
       </div>
     </div>
   </nav>

@@ -21,7 +21,7 @@ class Listar_proudutos{
     public function listar_bebidas_destaque(){
     global $conn;
 
-    $sql = $conn->query("SELECT * from produtos where id_categoria = 2 and destaque = 'nao'");
+    $sql = $conn->query("SELECT * from produtos where id_categoria = 2 and destaque = 'sim'");
     $lista = [];
 
     while($row = $sql->fetch_assoc()){
@@ -52,7 +52,7 @@ class Listar_proudutos{
     public function listar_frangos_destaque(){
     global $conn;
 
-    $sql = $conn->query("SELECT * from produtos where id_categoria = 1 and destaque = 'nao'");
+    $sql = $conn->query("SELECT * from produtos where id_categoria = 1 and destaque = 'sim'");
     $lista = [];
 
     while($row = $sql->fetch_assoc()){
