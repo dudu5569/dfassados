@@ -180,7 +180,8 @@ h1{
     }
 
     .img_produto{
-        max-width: 450px;
+        padding: 5px;
+        width: 90%;
     }
 
     
@@ -217,6 +218,14 @@ h1{
 
     #preview{
         margin: auto;
+    }
+
+    .janelacarrinho{
+        width: 70% !important;
+    }
+
+    .cart-container{
+        width: 85% !important;
     }
 }
 
@@ -409,7 +418,7 @@ header .icon-cart span{
 
 .janelacarrinho{
     width: 400px;
-    background-color: #353432;
+    background-color: whitesmoke;
     position: fixed;
     inset: 0 -400px 0 auto;
     display: grid;
@@ -419,7 +428,7 @@ header .icon-cart span{
 }
 
 .janelacarrinho h1{
-    color: white;
+    color: black;
     padding: 20px;
     margin: 0;
     font-weight: 300;
@@ -468,19 +477,19 @@ header .icon-cart span{
     display: inline-block;
     width: 25px;
     height: 25px;
-    color: white;
+    color: black;
     font-weight: bold;
     cursor: pointer;
 }
 
 .listacompras .itemcarrinhoquantidade span:nth-child(2){
     background-color: transparent;
-    color: white;
+    color: black;
 
 }
 
 .listacompras .itens:nth-child(even){
-    background-color: #eee1;
+    background-color: blue;
 }
 
 
@@ -492,9 +501,24 @@ header .icon-cart span{
 .listacompras{
     overflow-y: auto;
     padding: 10px;
-    color: white;
+    color: black;
 }
 
+#aumentarqntd{
+    background-color: transparent;
+    border: none;
+}
+
+#diminuirqntd{
+    background-color: transparent;
+    border: none;
+}
+
+#removeritem{
+    background-color: transparent;
+    border: none;
+    color: black;
+}
 
 /* body com classe para mostrar o carrinho de compras*/
 
