@@ -529,3 +529,50 @@ body.mostrarcarrinho .janelacarrinho{
 body.mostrarcarrinho .cart-container{
     transform: translateX(-250px);
 }
+
+
+/* pagina de checkout  */
+
+
+#lista-carrinho{
+    max-width: 600px !important;
+    margin: 0 auto !important;
+    padding: 20px !important;
+
+}
+
+#checktitle{
+    text-align: center;
+}
+
+#finalizarpedido{
+    margin: auto;
+}
+
+#bodycheckout{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#pagamentoendereco{
+    max-width: 600px;
+    text-align: center;
+}
+
+
+#endereco-box{
+    display: none;
+}
+
+#finalizar{
+    border: 1px solid black;
+    border-radius: 5px;
+    max-width: 600px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    text-align: center;
+}

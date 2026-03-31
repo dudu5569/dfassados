@@ -66,7 +66,7 @@ $tabela_bebidas = $lista->listar_bebidas();
 
   <div class="botoescarrinho">
     <button class="close">Fechar</button>
-    <button class="checkout">Concluir Pedido</button>
+    <button class="checkout" onclick="window.location.href='checkout.php'">Concluir Pedido</button>
   </div>
 </div>
 

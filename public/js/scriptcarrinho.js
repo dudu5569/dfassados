@@ -8,8 +8,13 @@ let lista = document.querySelector('.janelacarrinho .listacompras');
 let qntd_carrinho = document.querySelector('.qntd_carrinho');
 let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
 
-renderizarCarrinho();
-atualizarqntdcarrinho();
+document.addEventListener("DOMContentLoaded", () => {
+    if (lista) renderizarCarrinho();
+    if (qntd_carrinho) atualizarqntdcarrinho();
+
+    carregarCheckout();
+});
+
 
 function salvarCarrinho(){
     localStorage.setItem('carrinho', JSON.stringify(carrinho));
@@ -47,14 +52,18 @@ function removerItem(index){
 
 
 
-iconecart.addEventListener('click', () =>{
-    body.classList.toggle('mostrarcarrinho');
+if (iconecart) {
+    iconecart.addEventListener('click', () =>{
+        body.classList.toggle('mostrarcarrinho');
+    });
+}
 
-});
+if (botaofechar) {
+    botaofechar.addEventListener('click', () =>{
+        body.classList.toggle('mostrarcarrinho');
+    });
+}
 
-botaofechar.addEventListener('click', () =>{
-    body.classList.toggle('mostrarcarrinho');
-});
 
 function renderizarCarrinho() {
     lista.innerHTML = "";
@@ -66,8 +75,12 @@ function renderizarCarrinho() {
         div.style.margin = "10px";
         div.style.padding = "10px";
 
-        let subtotal = item.preco * item.quantidade;
+       let preco = Number(item.preco);
+        let quantidade = Number(item.quantidade);
+
+        let subtotal = preco * quantidade;
         total += subtotal;
+
 
         div.innerHTML = `
             <strong>${item.nome}</strong><br>
@@ -116,8 +129,6 @@ botoes.forEach(botao => {
             });
         }
 
-        console.log(carrinho);
-
         atualizarqntdcarrinho();
         renderizarCarrinho();
         salvarCarrinho();
@@ -127,4 +138,48 @@ botoes.forEach(botao => {
 
 
 
+function carregarCheckout() {
+    let container = document.getElementById("lista-carrinho");
+    if (!container) return;
+
+    let carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
+
+    let total = 0;
+    let html = "";
+
+    carrinho.forEach(item => {
+        let preco = Number(item.preco);
+        let quantidade = Number(item.quantidade);
+
+        let subtotal = preco * quantidade;
+        total += subtotal;
+
+        html += `
+            <div>
+                <h3>${item.nome}</h3>
+                <p>Quantidade: ${quantidade}</p>
+                <p>Preço: R$ ${preco.toFixed(2)}</p>
+                <p>Subtotal: R$ ${subtotal.toFixed(2)}</p>
+            </div>
+            <hr>
+        `;
+    });
+
+    html += `<h2>Total da compra: R$ ${total.toFixed(2)}</h2>`;
+
+    container.innerHTML = html;
+}
+
+let selectElement = document.getElementById("tipo-pedido");
+
+selectElement.addEventListener("change", () => {
+    let valor = selectElement.value;
+    let caixaendereco = document.getElementById("endereco-box");
+
+    if (valor == "1") {
+        caixaendereco.style.display = "block";
+    } else {
+        caixaendereco.style.display = "none";
+    }
+});
 
