@@ -170,10 +170,10 @@ function carregarCheckout() {
     container.innerHTML = html;
 }
 
-let selectElement = document.getElementById("tipo-pedido");
+let formapedido = document.getElementById("tipo-pedido");
 
-selectElement.addEventListener("change", () => {
-    let valor = selectElement.value;
+formapedido.addEventListener("change", () => {
+    let valor = formapedido.value;
     let caixaendereco = document.getElementById("endereco-box");
 
     if (valor == "1") {
@@ -183,3 +183,72 @@ selectElement.addEventListener("change", () => {
     }
 });
 
+let formapagamento = document.getElementById("pagamento");
+
+formapagamento.addEventListener("change", () =>{ 
+    console.log("mudou", formapagamento.value);   
+    let formapag = formapagamento.value;
+    let chavepix = document.getElementById("chavepix");
+
+    if(formapag == "3"){
+        chavepix.classList.remove("ocultarchave");
+    }else{
+        chavepix.classList.add("ocultarchave");
+    }
+});
+
+
+function enviarpedidowpp() {
+
+    let nomecliente = document.getElementById("nomecli").value;
+
+    let selectPagamento = document.getElementById("pagamento");
+    let pagamento = selectPagamento.options[selectPagamento.selectedIndex].text;
+
+    let selectTipo = document.getElementById("tipo-pedido");
+    let tipoPedido = selectTipo.options[selectTipo.selectedIndex].text;
+
+    let endereco = document.getElementById("endereco").value;
+
+    let chavepixdf = document.getElementById("chavepix").innerText;
+
+    let mensagem = `*NOVO PEDIDO*\n\n`;
+    mensagem += `Nome: ${nomecliente}\n\n`;
+
+    mensagem += `*Itens:*\n`;
+
+    let total = 0;
+
+    carrinho.forEach(item => {
+        let subtotal = item.preco * item.quantidade;
+        total += subtotal;
+
+        mensagem += `• ${item.nome}\n`;
+        mensagem += `  Quantidade: ${item.quantidade}\n`;
+        mensagem += `  Subtotal: R$ ${subtotal.toFixed(2)}\n\n`;
+    });
+
+    mensagem += `*Total: R$ ${total.toFixed(2)}*\n\n`;
+
+    mensagem += `Pagamento: ${pagamento}\n`;
+    if(pagamento == "Pix"){
+        mensagem += `\n *Chave Pix:* dfassados@gmail.com\nNome: João Brauna\n`;
+    }
+
+    mensagem += `Tipo: ${tipoPedido}\n`;
+
+    if (tipoPedido === "Entrega") {
+        mensagem += `Endereço: ${endereco}\n`;
+    }
+
+    mensagem += `\nObrigado pela preferência D&F Agradece!`;
+
+    let numero = "5511958328843";
+
+    let url = `https://wa.me/${numero}?text=${encodeURIComponent(mensagem)}`;
+
+    window.open(url, "_blank");
+}
+
+
+document.getElementById("finalizarwpp").addEventListener("click",enviarpedidowpp);

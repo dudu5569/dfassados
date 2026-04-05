@@ -12,32 +12,38 @@
 
     <div id="lista-carrinho"></div>
 
-
+    <div id="nomecliente">
+        <label for="">Nome:</label>
+        <input type="text" name="nomecliente" id="nomecli">
+    </div>
     <div id="finalizarpedido">
         <h3>Forma de pagamento</h3>
         <select id="pagamento">
-            <option value="">Selecione</option>
-            <option value="Dinheiro">Dinheiro</option>
-            <option value="Cartão">Cartão</option>
-            <option value="Pix">Pix</option>
-        </select>
+            <option value="1">Dinheiro</option>
+            <option value="2">Cartão</option>
+            <option value="3">Pix</option>
+        </select> <br>
+
+        <h4 class="ocultarchave" id="chavepix" >Chave pix: dfassados@gmail.com <br>
+            Nome: João Brauna
+        </h4>
+
 
         <h3>Tipo de pedido</h3>
         <select id="tipo-pedido">
-            <option value="">Selecione</option>
-            <option value="1">Entrega</option>
             <option value="2">Retirada</option>
+            <option value="1">Entrega</option>
         </select> <br>
 
 <div id="endereco-box">
     <h3>Endereço</h3>
-    <input type="text" id="endereco" placeholder="Digite seu endereço">
+    <input type="text" id="endereco" placeholder="Ex: Rua onde moro 100">
 </div> <br> <br>
 
 
 
-        <button>Finalizar Pedido Por WhatsApp</button>
-        <button>Cancelar</button>
+        <button id="finalizarwpp" >Enviar Pedido Por WhatsApp</button>
+        <button id="cancelarpedido" >Cancelar</button>
 </div>
 </div>
 

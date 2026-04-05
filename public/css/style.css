@@ -227,6 +227,19 @@ h1{
     .cart-container{
         width: 85% !important;
     }
+
+    header .icon-cart {
+        position: fixed !important;
+        bottom: auto !important;
+        right: 20px !important;
+        left: auto !important;
+        top: auto !important;
+        z-index: 9999;
+    }
+
+    #finalizarwpp{
+        margin-bottom: 10px;
+    }
 }
 
 
@@ -420,11 +433,11 @@ header .icon-cart span{
     width: 400px;
     background-color: whitesmoke;
     position: fixed;
-    inset: 0 -400px 0 auto;
+    inset: 0 -100% 0 auto;
     display: grid;
     grid-template-rows: 70px 1fr 70px;
     transition: .5s;
-    height: 100vh;
+    height: 100dvh;
 }
 
 .janelacarrinho h1{
@@ -575,4 +588,28 @@ body.mostrarcarrinho .cart-container{
     justify-content: center;
     padding: 20px;
     text-align: center;
+}
+
+.ocultarchave{
+    display: none;
+}
+
+#finalizarwpp{
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+#cancelarpedido{
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 15px;
+    cursor: pointer;
 }
