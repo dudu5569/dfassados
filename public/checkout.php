@@ -14,7 +14,7 @@
 
     <div id="nomecliente">
         <label for="">Nome:</label>
-        <input type="text" name="nomecliente" id="nomecli">
+        <input type="text" name="nomecliente" id="nomecli" required>
     </div>
     <div id="finalizarpedido">
         <h3>Forma de pagamento</h3>

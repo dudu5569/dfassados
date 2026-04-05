@@ -212,6 +212,19 @@ function enviarpedidowpp() {
 
     let chavepixdf = document.getElementById("chavepix").innerText;
 
+        if (!nomecliente) {
+        alert("Digite seu nome!");
+        nomeInput.focus();
+        return;
+    }
+
+    if (tipoPedido === "Entrega" && !endereco) {
+        alert("Digite o endereço para entrega!");
+        enderecoInput.focus();
+        return;
+    }
+
+
     let mensagem = `*NOVO PEDIDO*\n\n`;
     mensagem += `Nome: ${nomecliente}\n\n`;
 
@@ -232,7 +245,7 @@ function enviarpedidowpp() {
 
     mensagem += `Pagamento: ${pagamento}\n`;
     if(pagamento == "Pix"){
-        mensagem += `\n *Chave Pix:* dfassados@gmail.com\nNome: João Brauna\n`;
+        mensagem += `\n*Chave Pix:* dfassados@gmail.com\nNome: João Brauna\n\nApós realização do pagamento, enviar o comprovante nessa conversa\n\n`;
     }
 
     mensagem += `Tipo: ${tipoPedido}\n`;
