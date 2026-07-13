@@ -27,10 +27,10 @@ class login{
             session_regenerate_id(true); 
             $_SESSION['usuario_id'] = $usuarioBanco['id'];
 
-            header("Location: ..\admin\administrativo.php");
+            header("Location: ..\admindf0511\administrativo.php");
             exit;
         }else{
-            header("Location: ..\admin\loginfailed.php");
+            header("Location: ..\admindf0511\loginfailed.php");
             exit;
         }
         
