@@ -240,6 +240,22 @@ h1{
     #finalizarwpp{
         margin-bottom: 10px;
     }
+
+    #alinhamento{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    #bottom{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #spaco{
+        text-align: center;
+    }
+    
 }
 
 
