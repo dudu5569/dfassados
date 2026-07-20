@@ -629,3 +629,72 @@ body.mostrarcarrinho .cart-container{
     font-size: 15px;
     cursor: pointer;
 }
+
+
+/* painel administrativo */
+
+#paineladmin{
+    display: flex;
+    flex-direction: column !important;
+    align-items: center;
+    height: 100vh;
+}
+
+#ajustarbotoes{
+    gap: 20px;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 400px;
+    height: fit-content;
+    margin: auto;
+    padding: 20px;
+    margin-top: 5%;
+}
+
+
+.paineladmin{
+    border: 1px solid black;
+    border-radius: 15px;
+    width: 150px;
+    height: 100px;
+    padding: 20px;
+    text-align: center;
+    background-color: rgb(148, 148, 148);
+    font-weight: bold;
+    color: white;
+}
+
+#gerenciarbebidas{
+    background-color: orange;
+}
+
+#gerenciarassados{
+    background-color: orange;
+}
+
+#inserirproduto{
+    background-color: green;
+    color: white;
+}
+
+#encerrarsessao{
+    background-color: red;
+    color: white;
+    font-weight: bold;
+}
+
+.paineladmin:hover{
+    cursor: pointer;
+    filter: grayscale(75%);
+}
+
+#textpainel{
+    text-decoration: underline;
+}
+
+#textabove{
+    margin-top: 5%;
+    text-align: center;
+}

@@ -1,5 +1,5 @@
 <?php
-include '..\config\connn.php';
+include_once '..\config\connn.php';
 $usuario = $_POST['usuario'];
 $senha = $_POST['senha'];
 class login{
@@ -26,6 +26,7 @@ class login{
 
             session_regenerate_id(true); 
             $_SESSION['usuario_id'] = $usuarioBanco['id'];
+            $_SESSION['usuario_nome'] = $usuarioBanco['usuario'];
 
             header("Location: ..\admindf0511\administrativo.php");
             exit;
