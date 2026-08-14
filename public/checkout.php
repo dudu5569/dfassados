@@ -25,7 +25,7 @@
         </select> <br>
 
         <h4 class="ocultarchave" id="chavepix" >Chave pix: dfassados@gmail.com <br>
-            Nome: João Brauna
+            Nome: Eduardo Santos
         </h4>
 
 

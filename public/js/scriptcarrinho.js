@@ -245,7 +245,7 @@ function enviarpedidowpp() {
 
     mensagem += `Pagamento: ${pagamento}\n`;
     if(pagamento == "Pix"){
-        mensagem += `\n*Chave Pix:* dfassados@gmail.com\nNome: João Brauna\n\nApós realização do pagamento, enviar o comprovante nessa conversa\n\n`;
+        mensagem += `\n*Chave Pix:* dfassados@gmail.com\nNome: Eduardo Santos\n\nApós realização do pagamento, enviar o comprovante nessa conversa\n\n`;
     }
 
     mensagem += `Tipo: ${tipoPedido}\n`;
@@ -256,7 +256,7 @@ function enviarpedidowpp() {
 
     mensagem += `\nObrigado pela preferência D&F Agradece!`;
 
-    let numero = "5511958328843";
+    let numero = "5511947453021";
 
     let url = `https://wa.me/${numero}?text=${encodeURIComponent(mensagem)}`;
 
