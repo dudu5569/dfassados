@@ -698,3 +698,11 @@ body.mostrarcarrinho .cart-container{
     margin-top: 5%;
     text-align: center;
 }
+
+
+#removeritem{
+    background-color: red;
+    border-radius: 5px;
+    color: white;
+    
+}

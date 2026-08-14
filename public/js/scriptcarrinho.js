@@ -89,7 +89,7 @@ function renderizarCarrinho() {
             <button id="aumentarqntd" onclick="diminuir(${index})">➖</button>
             ${item.quantidade}
             <button id="diminuirqntd" onclick="aumentar(${index})">➕</button>
-            <button id="removeritem" onclick="removerItem(${index})">Remover🗑️</button>
+            <button id="removeritem" onclick="removerItem(${index})">Remover Item</button>
             
             <br>Subtotal: R$ ${subtotal.toFixed(2)}
         `;
